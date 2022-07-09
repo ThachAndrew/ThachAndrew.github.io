@@ -13,19 +13,18 @@
 ### Hi there, welcome to my Github dump 💩, a collection of school projects and a playground for my tinkering hobby 🤖
 
 
-- 🔭 I’m currently working in [LINQS](https://linqs.soe.ucsc.edu/) lab at UCSC
-- 🌱 I’m currently learning statistical relational learning where we perform collective inference on big data.  
-- 👯 I’m looking to collaborate on any software development or AI/ML research.  
+- I’m currently working in [LINQS](https://linqs.soe.ucsc.edu/) lab at UCSC, learning statistical relational learning where we perform collective inference on big data.  
+- I’m looking to collaborate on any software development or AI/ML research.  
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about my other projects that I'm not allowed to post publicly.  
 - 📫 How to reach me: ...
-- 😄 Hobbies: Tinkering with Arduinos and Raspberry Pi.  Building custom PCs and rooting/jailbreaking Apple devices. 
-- ⚡ Fun fact: 
+- 😄 Hobbies: Tinkering with Arduinos and Raspberry Pi.  Building custom PCs and rooting/jailbreaking Apple devices.  
 
 ### :hammer_and_wrench: Workflow:
 
 <div>
   <img src='https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg' width="40" height="40">
   <img src='https://github.com/devicons/devicon/blob/master/icons/vim/vim-original.svg' width="40" height="40">
   <img src='https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg' width="40" height="40">
   <img src='https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg' width="40" height="40">
