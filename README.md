@@ -15,10 +15,23 @@
 
 - 🔭 I’m currently working in [LINQS](https://linqs.soe.ucsc.edu/) lab at UCSC
 - 🌱 I’m currently learning statistical relational learning where we perform collective inference on big data.  
-- 👯 I’m looking to collaborate on ...
+- 👯 I’m looking to collaborate on any software development or AI/ML research.  
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about my other projects that I'm not allowed to post publicly.  
 - 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+- 😄 Hobbies: Tinkering with Arduinos and Raspberry Pi.  Building custom PCs and rooting/jailbreaking Apple devices. 
+- ⚡ Fun fact: 
+
+### :hammer_and_wrench: Workflow:
+
+<div>
+  <img src='https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/vim/vim-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg' width="40" height="40">
+  <img src='https://github.com/devicons/devicon/blob/master/icons/latex/latex-original.svg' width="40" height="40">
+</div>
 
