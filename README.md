@@ -8,7 +8,6 @@
     <img src="https://img.shields.io/badge/UCSC-Baskin%20Engineering-yellow"/>
   </a>
 </div>
-<img src="https://komarev.com/ghpvc/?username=ThachAndrew&style=flat-square&color=blue" alt=""/>
 
 ### Hi there, welcome to my Github dump 💩, a collection of school projects and a playground for my tinkering hobby 🤖
 
@@ -31,4 +30,9 @@
   <img src='https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg' width="40" height="40">
   <img src='https://github.com/devicons/devicon/blob/master/icons/latex/latex-original.svg' width="40" height="40">
 </div>
+
+\
+\
+\
+<img src="https://komarev.com/ghpvc/?username=ThachAndrew&style=flat-square&color=green&label=xeyes" alt=""/>
 
