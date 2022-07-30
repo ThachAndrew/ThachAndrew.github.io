@@ -15,7 +15,10 @@
 - I’m currently working in [LINQS](https://linqs.soe.ucsc.edu/) lab at UCSC, learning statistical relational learning where we perform collective inference on big data.  
 - I’m looking to collaborate on any software development or AI/ML research.  
 - 💬 Ask me about my other projects that I'm not allowed to post publicly.  
-- 😄 Hobbies: Tinkering with Arduinos and Raspberry Pi.  Building custom PCs and rooting/jailbreaking Apple devices.  
+- Current tech hobbies: 
+  - Tinkering with Arduinos and Raspberry Pi.  
+  - Building custom server-hypervisor systems (jerry-rigged AWS), and unnecessary home automation devices.  
+  - rooting/jailbreaking Apple devices.  
 
 ### :hammer_and_wrench: Workflow:
 
