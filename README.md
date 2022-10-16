@@ -3,7 +3,7 @@
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=00ff00&height=200&text=Thach&fontAlign=70&rotate=13&fontAlignY=25&descAlign=70.&descAlignY=44)
 --->
 
-[Personal Website](https://thachandrew.github.io/about/)
+Personal Website: [https://thachandrew.github.io/about/](https://thachandrew.github.io/about/)
 
 <div id="badges">
   <a href="https://www.linkedin.com/in/thachandrew/">
