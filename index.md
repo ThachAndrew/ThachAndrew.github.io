@@ -27,5 +27,3 @@ Hello World,
   - Building custom server-hypervisor systems (jerry-rigged AWS), and unnecessary home automation devices.  
   - rooting/jailbreaking Apple devices.  
 
-
-<img src="https://komarev.com/ghpvc/?username=ThachAndrew&style=flat-square&color=green&label=xeyes" alt=""/>
