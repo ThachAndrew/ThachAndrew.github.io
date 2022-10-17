@@ -2,7 +2,7 @@
 title: Projects
 nav-title: Projects
 permalink: /projects/
-layout: page
+layout: default
 ---
 
 *Under construction*

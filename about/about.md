@@ -2,7 +2,7 @@
 title: About
 nav-title: About
 permalink: /about/
-layout: page
+layout: default
 ---
 
 

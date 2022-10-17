@@ -1,7 +1,7 @@
 ---
 title: Synthetic Regression Generator
 nav-title: Synthetic Regression Generator
-layout: page
+layout: default
 ---
 
 ## This notebook generates time series data in different ways: without regression, with regression.

@@ -1,7 +1,7 @@
 ---
 title: Game AI
 nav-title: Game AI
-layout: page
+layout: default
 ---
 
 *Under construction*
