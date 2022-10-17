@@ -18,8 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Thach, Andrew
-# email: public@example.com
+title: whoami
+author:
+  name: Andrew Thach
+  email: contact@me
 description: >- # this means to ignore newlines until "baseurl:"
   Personal website for Andrew Thach 
 
