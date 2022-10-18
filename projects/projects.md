@@ -11,7 +11,7 @@ See my [GitHub](https://github.com/ThachAndrew) in the meanwhile.
 
 
 ## Synthetic Regression Generator
-Used to help create and study ARIMA models.
+Used to help create and study ARIMA models. This laid a foundation for modeling noisy seasonal trends with moving averages.
 
 [Read more](/SyntheticRegressionGenerator/SyntheticGenerator.md)
 
