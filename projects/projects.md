@@ -5,6 +5,10 @@ permalink: /projects/
 layout: default
 ---
 
+<h2 id="collective-graph-identification"><a href="/projects/CollectiveGraphIdentification/CollectiveGraphIdentification.html" style="color: #aaff00">Collective Graph Identification</a></h2>
+Here, we solve several canonical problems in network analysis: entity resolution (determining when two observations correspond to the same entity), link prediction (inferring the existence of links), and node labeling (inferring hidden attributes).
+[![Preview](/CollectiveGraphIdentification/enron_graphs.png)](/projects/CollectiveGraphIdentification/CollectiveGraphIdentification.html)
+
 <h2 id="drug-drug-interaction"><a href="/projects/DrugDrugInteraction/DrugDrugInteraction.html" style="color: #aaff00">Drug-Drug Interaction</a></h2>
 Infer unknown drug drug interactions from a network of multiple drug-based similarities and known interactions.
 <https://github.com/linqs/psl-examples/tree/main/drug-drug-interaction>
