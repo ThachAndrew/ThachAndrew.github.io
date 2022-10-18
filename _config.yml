@@ -33,6 +33,8 @@ header_pages:
  - about/about.md
  - projects/projects.md
 
+collections:
+  protected:
 
 # Build settings
 markdown: kramdown
