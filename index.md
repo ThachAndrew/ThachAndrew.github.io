@@ -8,8 +8,8 @@
 layout: home
 ---
 
-## [About](about/about.md) 
 ## [Projects](projects/projects.md)
+## [About](about/about.md) 
 
 ---
 
