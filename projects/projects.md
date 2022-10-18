@@ -25,11 +25,11 @@ Work on heuristic search algorithms, expectimax pruning, reinforcment learning, 
 
 
 ## Machine Learning
+- Created infrastructures for many different ML pipelines.
+- Also worked on minimizing branch speculation errors in the CPU; trained a perceptron model over different applications, used the outputs to make better predictions.
 
-[Under Construction]
 
-
-## Ransomware Detection in the Hypervisor Layer
-
-[Under Construction]
-
+## Ransomware Detection in the Hypervisor Layer (Nutanix Sponsored)
+- Researched different ways of detecting ransomware for cheap and efficient use in the "cloud" layer.
+- Trained a decision tree on a malware dataset.
+- Applied the model in a hypervisor for Nutanix.
