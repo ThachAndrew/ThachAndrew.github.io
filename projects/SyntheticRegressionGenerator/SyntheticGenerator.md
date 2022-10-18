@@ -1,6 +1,7 @@
 ---
 title: Synthetic Regression Generator
 nav-title: Synthetic Regression Generator
+category: projects
 layout: default
 ---
 
