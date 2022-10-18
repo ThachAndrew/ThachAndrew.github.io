@@ -16,7 +16,7 @@ Infer unknown drug drug interactions from a network of multiple drug-based simil
 
 <h2 id="synthetic-regression-generator"><a href="/projects/SyntheticRegressionGenerator/SyntheticGenerator.html" style="color: #aaff00">Synthetic Regression Generator</a></h2>
 Used to help create and study ARIMA models. This laid a foundation for modeling noisy seasonal trends with moving averages.
-![Preview](/SyntheticRegressionGenerator/output_6_1.png)
+[![Preview](/SyntheticRegressionGenerator/output_6_1.png)](/projects/SyntheticRegressionGenerator/SyntheticGenerator.html)
 
 
 <h2 id="game-ai"><a href="/projects/GameAI/GameAI.html" style="color: #aaff00">GameAI </a></h2>
