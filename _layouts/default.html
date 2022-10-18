@@ -14,7 +14,7 @@
 
     <header>
       <div class="container">
-        <a id="a-title" href="{{ '/' | relative_url }}">
+        <a id="a-title" href="{{ page.site | relative_url }}">
           <h1>{{ page.title | default: site.github.repository_name }}</h1>
         </a>
 
@@ -22,11 +22,21 @@
     </header>
 
     <div class="container">
+      <section id="directory">
+	      <a id="back" href= {% if page.category %} 
+		      			"{{ page.category | relative_url }}"
+		 		 {% else %}
+		 			"{{ "../" | relative_url}}"
+		 		 {% endif %}
+	      >
+          <h1> ../ </h1>
+        </a>
+      </section>
+
       <section id="main_content">
         {{ content }}
       </section>
     </div>
 
-    {%- include footer.html -%}
   </body>
 </html>
