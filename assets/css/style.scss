@@ -67,22 +67,20 @@
 //     justify-content: space-between;
 //     align-items: center;
 // }
-// 
+
 // h2.footer-heading {
 //     margin-bottom: 0;
 // }
-// 
+
 // .simple-footer span {
-//     font-size: $small-font-size;
-//     color: $grey-color;
-// }
 // 
+// }
+
 // .simple-footer ul.social-media-list {
 //     margin-bottom: 0;
 // }
 // 
-// .simple-footer ul.social-media-list li {
-//     display: inline-block;
-//     margin-left: 20px;
-// }
-// 
+.simple-footer ul.social-media-list li {
+    display: inline;
+}
+

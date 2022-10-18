@@ -26,14 +26,8 @@
         {{ content }}
       </section>
     </div>
+
     {%- include footer.html -%}
 
-    {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-        </ul>
-    {%- endif %}
   </body>
 </html>

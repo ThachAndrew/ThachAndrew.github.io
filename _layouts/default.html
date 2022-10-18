@@ -15,7 +15,7 @@
     <header>
       <div class="container">
         <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <h1>{{ page.title | default: site.github.repository_name }}</h1>
         </a>
 
       </div>
@@ -27,12 +27,6 @@
       </section>
     </div>
 
-    {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-        </ul>
-    {%- endif %}
+    {%- include footer.html -%}
   </body>
 </html>
