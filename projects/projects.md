@@ -5,33 +5,23 @@ permalink: /projects/
 layout: default
 ---
 
-*Under construction*
 
-See my [GitHub](https://github.com/ThachAndrew) in the meanwhile.
-
-
-## Synthetic Regression Generator
+<h2 id="synthetic-regression-generator"><a href="/projects/SyntheticRegressionGenerator/SyntheticGenerator.html" style="color: #aaff00">Synthetic Regression Generator</a></h2>
 Used to help create and study ARIMA models. This laid a foundation for modeling noisy seasonal trends with moving averages.
-
-[Read more](/SyntheticRegressionGenerator/SyntheticGenerator.md)
-
 ![Preview](/SyntheticRegressionGenerator/output_6_1.png)
 
 
-## Game AI
-I worked on heuristic search algorithms, expectimax pruning, reinforcment learning, and creating adversary bots.
-
-[Read more](/GameAI/GameAI.md)
-
-![Preview](/GameAI/pacman.gif)
+<h2 id="game-ai"><a href="/projects/GameAI/GameAI.html" style="color: #aaff00">GameAI </a></h2>
+Work on heuristic search algorithms, expectimax pruning, reinforcment learning, and creating adversary bots.
+[![Preview](/GameAI/pacman.gif)](/projects/GameAI/GameAI.html)
 
 
 ## Machine Learning
 
-[Read more]
+[Under Construction]
 
 
 ## Ransomware Detection in the Hypervisor Layer
 
-[Read more]
+[Under Construction]
 
