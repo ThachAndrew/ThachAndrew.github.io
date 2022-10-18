@@ -1,6 +1,7 @@
 ---
 title: Game AI
 nav-title: Game AI
+category: projects
 layout: default
 ---
 
