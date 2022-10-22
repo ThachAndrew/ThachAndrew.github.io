@@ -1462,8 +1462,7 @@ title_map = {"other": 0, "manager": 1, "specialist": 2, "director": 3, "executiv
 # The copy is to suppress an in-place warning
 email_has_label_obs = email_nodes_observed[['id', 'title']].copy()
 # convert titles to integers, so PSL can ground faster
-email_has_label_obs['title'] = email_has_label_obs['title'].map(title_map)
-
+email_has_label_obs = email_has_label_obs.replace({'title': title_map})
 # add in an existence column
 email_has_label_obs['exists'] = 1.0
 ```
@@ -1912,10 +1911,12 @@ ground_truth_email_nodes
 
 
 ```python
+# Grab the ground truths for the missing annotations
 email_has_label_truth = ground_truth_email_nodes[ground_truth_email_nodes['id'].isin(list(email_nodes_targets['id']))][['id', 'title']].copy()
-# Convert titles to integers so PSL can ground faster
-email_has_label_truth['title'] = email_has_label_truth['title'].map(title_map)
 
+# Convert titles to integers so PSL can ground faster
+email_has_label_truth = email_has_label_truth.replace({"title": title_map})
+email_has_label_truth
 # Add in an existence column
 email_has_label_truth['exists'] = 1.0
 
@@ -2031,15 +2032,507 @@ full_set_email_has_label_truth
 
 ## Predicate: CoRef(E1, E2)
 
+### Observed
+
 
 ```python
+exists_map = {"NOTEXIST": 0.0, "EXIST": 1.0, 0.0: 0.0, 1.0: 1.0}
+coref_edges_observed = coref_edges_observed.replace({"exists": exists_map})
 
+coref_edges_observed
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>email</th>
+      <th>alt_email</th>
+      <th>exists</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2856</td>
+      <td>265</td>
+      <td>141</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18491</td>
+      <td>310</td>
+      <td>295</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>516</td>
+      <td>272</td>
+      <td>183</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5131</td>
+      <td>201</td>
+      <td>19</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12417</td>
+      <td>138</td>
+      <td>78</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20775</th>
+      <td>5383</td>
+      <td>69</td>
+      <td>104</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20776</th>
+      <td>15003</td>
+      <td>208</td>
+      <td>135</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20777</th>
+      <td>4450</td>
+      <td>197</td>
+      <td>47</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20778</th>
+      <td>20302</td>
+      <td>25</td>
+      <td>248</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20780</th>
+      <td>19684</td>
+      <td>248</td>
+      <td>54</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>16625 rows × 4 columns</p>
+</div>
+
+
 
 
 ```python
 # Outputs to file
-# coref_edges.to_csv('CoRef_obs.csv', sep ='\t', index=False, header=False)
+# coref_edges_observed.to_csv('CoRef_obs.csv', sep ='\t', index=False, header=False, columns=['email', 'alt_email', 'exists'])
+```
+
+### Truths/Targets
+
+
+```python
+# need to rename one of the columns due to key collision
+# use copy for safety
+!cp ../c3/namata-kdd11-data/enron/enron-samples-lowunk/outputgraph/enron.UNDIRECTED.coref.tab .
+!sed -i 's/email/alt_email/2g' enron.UNDIRECTED.coref.tab
+
+ground_truth_coref_edges = load_table('enron.UNDIRECTED.coref.tab')
+resolve_column_type(ground_truth_coref_edges)
+ground_truth_coref_edges
+```
+
+    Header:  UNDIRECTED	coref
+    
+    This is not a NODE file, so don't load this row
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>email</th>
+      <th>alt_email</th>
+      <th>exists</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2856</td>
+      <td>265</td>
+      <td>141</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18491</td>
+      <td>310</td>
+      <td>295</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>516</td>
+      <td>272</td>
+      <td>183</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5131</td>
+      <td>201</td>
+      <td>19</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12417</td>
+      <td>138</td>
+      <td>78</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20776</th>
+      <td>15003</td>
+      <td>135</td>
+      <td>208</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>20777</th>
+      <td>4450</td>
+      <td>197</td>
+      <td>47</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>20778</th>
+      <td>20302</td>
+      <td>248</td>
+      <td>25</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>20779</th>
+      <td>12985</td>
+      <td>222</td>
+      <td>118</td>
+      <td>NOTEXIST</td>
+    </tr>
+    <tr>
+      <th>20780</th>
+      <td>19684</td>
+      <td>248</td>
+      <td>54</td>
+      <td>NOTEXIST</td>
+    </tr>
+  </tbody>
+</table>
+<p>20781 rows × 4 columns</p>
+</div>
+
+
+
+
+```python
+# Need to fill in the 'exists' missing annotations
+coref_edges_targets
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>email</th>
+      <th>alt_email</th>
+      <th>exists</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>6735</td>
+      <td>177</td>
+      <td>288</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10209</td>
+      <td>174</td>
+      <td>56</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>13108</td>
+      <td>107</td>
+      <td>131</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2532</td>
+      <td>271</td>
+      <td>1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>3985</td>
+      <td>323</td>
+      <td>163</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20711</th>
+      <td>17055</td>
+      <td>151</td>
+      <td>266</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20717</th>
+      <td>10745</td>
+      <td>124</td>
+      <td>207</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20732</th>
+      <td>15558</td>
+      <td>15</td>
+      <td>212</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20762</th>
+      <td>3578</td>
+      <td>80</td>
+      <td>328</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20779</th>
+      <td>12985</td>
+      <td>222</td>
+      <td>118</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>4156 rows × 4 columns</p>
+</div>
+
+
+
+
+```python
+# Grab the ground truths for the missing annotations
+coref_edges_truth = ground_truth_coref_edges[ground_truth_coref_edges['id'].isin(list(coref_edges_targets['id']))].copy()
+coref_edges_truth = coref_edges_truth.replace({"exists": exists_map})
+coref_edges_truth
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>email</th>
+      <th>alt_email</th>
+      <th>exists</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>6735</td>
+      <td>177</td>
+      <td>288</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10209</td>
+      <td>174</td>
+      <td>56</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>13108</td>
+      <td>107</td>
+      <td>131</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2532</td>
+      <td>1</td>
+      <td>271</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>3985</td>
+      <td>323</td>
+      <td>163</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20711</th>
+      <td>17055</td>
+      <td>151</td>
+      <td>266</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20717</th>
+      <td>10745</td>
+      <td>207</td>
+      <td>124</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20732</th>
+      <td>15558</td>
+      <td>15</td>
+      <td>212</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20763</th>
+      <td>3578</td>
+      <td>80</td>
+      <td>328</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20779</th>
+      <td>12985</td>
+      <td>222</td>
+      <td>118</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>4156 rows × 4 columns</p>
+</div>
+
+
+
+
+```python
+# Output to file
+# coref_edges_truth.to_csv('CoRef_truth.csv', sep ='\t', index=False, header=False, columns=['email', 'alt_email', 'exists'])
 ```
 
 ## Predicate: EmailManages(E1, E2)
