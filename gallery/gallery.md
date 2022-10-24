@@ -5,7 +5,6 @@ permalink: /gallery/
 layout: default
 ---
 
-
 ![Andrew_Thach_10_Trescony.JPG](public_gallery/Andrew_Thach_10_Trescony.JPG) 
 
 ![Andrew_Thach_1_Class.jpg](public_gallery/Andrew_Thach_1_Class.jpg) 
@@ -19,6 +18,8 @@ layout: default
 ![Andrew_Thach_6_WestCliff.jpg](public_gallery/Andrew_Thach_6_WestCliff.jpg) 
 
 ![Andrew_Thach_9_Playground.jpg](public_gallery/Andrew_Thach_9_Playground.jpg) 
+
+![IMG_7265.JPG](public_gallery/IMG_7265.JPG)
 
 ![IMG_8214.JPG](public_gallery/IMG_8214.JPG) 
 
