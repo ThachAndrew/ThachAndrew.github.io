@@ -19,8 +19,6 @@ layout: default
 
 ![Andrew_Thach_9_Playground.jpg](public_gallery/Andrew_Thach_9_Playground.jpg) 
 
-![IMG_7265.JPG](public_gallery/IMG_7265.JPG)
-
 ![IMG_8214.JPG](public_gallery/IMG_8214.JPG) 
 
 ![IMG_8629.JPG](public_gallery/IMG_8629.JPG) 
