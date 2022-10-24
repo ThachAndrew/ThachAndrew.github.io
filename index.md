@@ -10,6 +10,7 @@ layout: home
 
 <h2 id="projects"><a href="/projects/" style="color: #aaff00">Projects</a></h2>
 <h2 id="about"><a href="/about/" style="color: #aaff00">About</a></h2>
+<h2 id="gallery"><a href="/gallery/" style="color: #aaff00">Gallery</a></h2>
 
 ---
 
