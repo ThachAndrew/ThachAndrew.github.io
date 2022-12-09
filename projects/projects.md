@@ -33,3 +33,7 @@ Work on heuristic search algorithms, expectimax pruning, reinforcment learning, 
 - Researched different ways of detecting ransomware for cheap and efficient use in the "cloud" layer.
 - Trained a decision tree on a malware dataset.
 - Applied the model in a hypervisor for Nutanix.
+
+## Essays
+- [Modern Technology: Triumph and Trouble](/projects/Essays/tech_triumph_trouble.pdf)
+
