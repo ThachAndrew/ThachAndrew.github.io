@@ -3,7 +3,9 @@
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=00ff00&height=200&text=Thach&fontAlign=70&rotate=13&fontAlignY=25&descAlign=70.&descAlignY=44)
 --->
 
+Personal Website: [https://andrewthach.com/](andrewthach.com)
 Personal Website: [https://thachandrew.github.io/](https://thachandrew.github.io/)
+
 
 - I'm a programmer/developer working on AI/ML research in [LINQS](https://linqs.soe.ucsc.edu/) lab at <a href="https://engineering.ucsc.edu/people/anthach"><img src="https://img.shields.io/badge/UCSC-Baskin%20Engineering-yellow"/></a>, modeling *statistical relational learning* methods where we perform collective inference on big data.
 - I'm also a TA; and I work on autograding servers that provide feedback to students in CSE40: Machine Learning Basics.  In the future, I plan on detecting "ChatGPT" answers (where students ask a Large Language Model for answers).
